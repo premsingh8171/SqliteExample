@@ -15,7 +15,7 @@ public class MyHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        String sql ="CREATE TABLE PRDUCTS (_id INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,DESCRIPTION,PRICE REAL)";
+        String sql ="CREATE TABLE PRODUCTS (_id INTEGER PRIMARY KEY AUTOINCREMENT,NAME TEXT,DESCRIPTION,PRICE REAL)";
         db.execSQL(sql);
         //insertdata
         insertData("Jam","Fruit Jam",300.50,db);
@@ -34,7 +34,7 @@ public class MyHelper extends SQLiteOpenHelper {
         values.put("NAME",name);
         values.put("DESCRIPTION",description);
         values.put("PRICE",price);
-        database.insert("PRDUCTS",null,values);
+        database.insert("PRODUCTS",null,values);
 
     }
 }
